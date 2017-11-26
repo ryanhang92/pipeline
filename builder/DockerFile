@@ -1,0 +1,20 @@
+# Sample Template Each Project is Different
+
+FROM ubuntu:16.04
+
+# Download dev dependencies
+RUN apt-get -y update --fix-missing  
+RUN apt-get install -y python-pip python-dev vim curl  
+RUN pip install --upgrade pip
+
+# Download 
+RUN apt-get install -y python-numpy python-scipy  
+RUN pip install scikit-learn  
+RUN pip install flask-restful
+
+# Add the project code
+ADD . /project_source
+
+# Execute the Project Code
+CMD [ "c1", "c2" ]
+
